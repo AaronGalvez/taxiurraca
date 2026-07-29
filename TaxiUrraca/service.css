@@ -1,0 +1,215 @@
+/* =========================================
+   SERVICE.CSS - PÁGINA DE SERVICIOS (otherService.html)
+========================================= */
+
+:root {
+  --taxi-yellow: #FFC107;
+  --taxi-dark: #212121;
+  --bg-light: #F9FAFB;
+  --text-main: #333333;
+  --border-radius: 8px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: var(--bg-light);
+  color: var(--text-main);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* =========================================
+   NAVEGACIÓN 
+========================================= */
+nav {
+  background: #333;
+  padding: 12px;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  background: var(--taxi-yellow);
+  display: inline-block;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  color: #333;
+  text-decoration: none;
+  padding: 10px 18px;
+  display: inline-block;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover, nav a.active {
+  background: var(--taxi-dark);
+  color: var(--taxi-yellow);
+}
+
+/* =========================================
+   HEADER
+========================================= */
+.header-service {
+  background-color: var(--taxi-yellow);
+  color: var(--taxi-dark);
+  text-align: center;
+  padding: 2.5rem 1rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.logo {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.header-service h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-weight: 600;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* =========================================
+   CONTENIDO PRINCIPAL Y SECCIONES
+========================================= */
+.main-service {
+  flex: 1;
+  width: 95%;
+  max-width: 900px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; 
+}
+
+section {
+  background: var(--fondo);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+section h2 {
+  color: var(--texto);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+/* =========================================
+   DISEÑO DE LAS LICENCIAS (GRID)
+========================================= */
+.license-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.license-list li {
+  background: var(--bg-light);
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: var(--taxi-dark);
+  border: 2px solid var(--taxi-yellow);
+  transition: transform 0.2s;
+}
+
+.license-list li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* =========================================
+   ELEMENTOS MULTIMEDIA (SVG Y VIDEO)
+========================================= */
+.svg-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.video-wrapper video {
+  width: 100%;
+  max-width: 500px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* =========================================
+   FOOTER CON FLEXBOX
+========================================= */
+.footer-service {
+  background: var(--taxi-dark);
+  color: white;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
+.social-contact {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+}
+
+.social-contact img {
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+}
+
+/* =========================================
+    DARK MODE
+========================================= */
+:root {
+  --fondo: #ffffff;
+  --texto: #1a1a1a;
+  --acento: #2563eb;
+}
+
+body.oscuro {
+  --fondo: #121212;
+  --texto: #f1f1f1;
+  --acento: #60a5fa;
+}
+
+body {
+  background-color: var(--fondo);
+  color: var(--texto);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
