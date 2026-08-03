@@ -1,0 +1,315 @@
+/* =========================================
+   SERVICE.CSS - PÁGINA DE SERVICIOS (otherService.html)
+========================================= */
+
+:root {
+  --taxi-yellow: #FFC107;
+  --taxi-dark: #212121;
+  --bg-light: #F9FAFB;
+  --text-main: #333333;
+  --border-radius: 8px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #121212;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+/* =========================================
+   SEÑALES DE TRANSITO
+========================================= */
+.traffic-signs-section {
+  background: rgb(246, 245, 245);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+  text-align: center;
+  color: black;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+/* =========================================
+   SECCIÓN DE INTRODUCCIÓN
+========================================= */
+/* ---------- INTRODUCCIÓN ---------- */
+
+article {
+    display: flex;
+    justify-content: center;
+    padding: 20px 20px;
+    background: #111;
+}
+
+article p {
+    max-width: 950px;
+    width: 100%;
+    background: #1d1d1d;
+    color: #f5f5f5;
+    padding: 35px 40px;
+    border-radius: 15px;
+    font-size: 1.08rem;
+    line-height: 1.9;
+    text-align: justify;
+    box-shadow: 0 8px 25px rgba(0,0,0,.35);
+    border-left: 6px solid #f5b400;
+}
+
+/* Móvil */
+@media (max-width: 768px) {
+    article {
+        padding: 40px 15px;
+    }
+
+    article p {
+        padding: 25px;
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+}
+/* =========================================
+   PDF SECCIÓN
+========================================= */
+.pdf-section{
+    display:flex;
+    justify-content:center;
+    padding:50px 20px;
+}
+
+.pdf-card{
+    width:100%;
+    max-width:650px;
+    display:flex;
+    align-items:center;
+    gap:20px;
+    padding:20px 25px;
+    text-decoration:none;
+    color:#222;
+    background:#fff;
+    border-radius:15px;
+    box-shadow:0 8px 25px rgba(0,0,0,.15);
+    transition:.25s;
+}
+
+.pdf-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+}
+
+.pdf-icon{
+    font-size:55px;
+}
+
+.pdf-info{
+    flex:1;
+}
+
+.pdf-info h3{
+    margin:0;
+    font-size:1.2rem;
+}
+
+.pdf-info p{
+    margin-top:6px;
+    color:#666;
+}
+
+.pdf-arrow{
+    font-size:28px;
+    color:#d32f2f;
+}
+
+/* =========================================
+   NAVEGACIÓN 
+========================================= */
+nav {
+  background: #333;
+  padding: 12px;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  background: var(--taxi-yellow);
+  display: inline-block;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  color: #333;
+  text-decoration: none;
+  padding: 10px 18px;
+  display: inline-block;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover, nav a.active {
+  background: var(--taxi-dark);
+  color: var(--taxi-yellow);
+}
+
+/* =========================================
+   HEADER
+========================================= */
+.header-service {
+  background-color: var(--taxi-yellow);
+  color: var(--taxi-dark);
+  text-align: center;
+  padding: 1.0rem 1.0rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.logo {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.header-service h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-weight: 600;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* =========================================
+   CONTENIDO PRINCIPAL Y SECCIONES
+========================================= */
+.main-service {
+  flex: 1;
+  width: 95%;
+  max-width: 900px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; 
+}
+
+section {
+  background: var(--fondo);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+section h2 {
+  color: var(--texto);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+/* =========================================
+   DISEÑO DE LAS LICENCIAS (GRID)
+========================================= */
+.license-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.license-list li {
+  background: var(--bg-light);
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: var(--taxi-dark);
+  border: 2px solid var(--taxi-yellow);
+  transition: transform 0.2s;
+}
+
+.license-list li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* =========================================
+   ELEMENTOS MULTIMEDIA (SVG Y VIDEO)
+========================================= */
+.svg-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.video-wrapper video {
+  width: 100%;
+  max-width: 500px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* =========================================
+   FOOTER CON FLEXBOX
+========================================= */
+.footer-service {
+  background: var(--taxi-dark);
+  color: white;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
+.social-contact {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+}
+
+.social-contact img {
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+}
+:root {
+  --fondo: #121212;
+  --texto: #f1f1f1;
+  --acento: #60a5fa;
+}
+
+body, .traffic-signs-section{
+  background-color: var(--fondo);
+  color: var(--texto);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
