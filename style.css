@@ -248,22 +248,7 @@ h4{
 }
 
 /* ---------- MÓVIL ---------- */
-/* ---------- MÓVIL ---------- */
 @media (max-width: 768px) {
-
-    /* Navegación */
-    nav ul {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 10px;
-        padding: 10px;
-    }
-
-    nav li {
-        margin: 0;
-    }
 
     /* Encabezado */
     header {
